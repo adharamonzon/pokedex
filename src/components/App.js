@@ -1,19 +1,25 @@
 import React from 'react';
+import PokeList from './PokeList';
+import api from '../data/apiData.json';
+
 import '../stylesheets/App.css';
 
-function App() {
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pokemon: api,
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1 className='title'>Mi lista de Pokemon</h1>
+        <PokeList items={api} />
+      </div>
+    );
+  }
 }
 
 export default App;
