@@ -11,10 +11,15 @@ const Pokemon = (props) => {
   });
 
   const favoritePokemon = () => {
-    props.favoritePokemon(props.item.id);
+    props.favoritePokemon({
+      pokemonId: props.item.id,
+    });
     console.log('pokemon clikado', props.item.id);
   };
 
+  /* const paintFavorites () => {
+    props.state
+  } */
   return (
     <div className='pokemonContainer' onClick={favoritePokemon}>
       <img alt='pokemon' src={props.item.url} />
