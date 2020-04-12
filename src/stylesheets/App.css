@@ -38,3 +38,6 @@
   margin-right: 5px;
   background-color: rgb(176, 196, 222, 0.5);
 }
+.favorite-pokemon {
+  color: red;
+}
