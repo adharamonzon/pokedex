@@ -2,9 +2,9 @@ import React from 'react';
 import Pokemon from './Pokemon';
 
 const PokeList = (props) => {
-  console.log(props.state);
-
   const items = props.items.map((item) => {
+    /*    console.log(props); */
+
     return (
       <li className='pokemonList' key={item.id}>
         <Pokemon item={item} favoritePokemon={props.favoritePokemon} />

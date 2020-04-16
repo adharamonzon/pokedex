@@ -14,14 +14,10 @@ const Pokemon = (props) => {
     props.favoritePokemon({
       pokemonId: props.item.id,
     });
-    console.log('pokemon clikado', props.item.id);
   };
 
-  /* const paintFavorites () => {
-    props.state
-  } */
   return (
-    <div className='pokemonContainer' onClick={favoritePokemon}>
+    <div className={props.item.isFavorite ? 'pokemonContainer favorite-pokemon' : 'pokemonContainer'} onClick={favoritePokemon}>
       <img alt='pokemon' src={props.item.url} />
       <h3 className='pokemonName'>{props.item.name}</h3>
       <ul className='typesList'>{types}</ul>

@@ -9,19 +9,20 @@ class App extends React.Component {
     super(props);
     this.state = {
       pokemon: api,
-      favorite: [],
     };
     this.favoritePokemon = this.favoritePokemon.bind(this);
   }
 
   favoritePokemon(data) {
-    console.log('App: me han clicado', data);
-    this.setState({
-      favorite: this.data,
-    });
-    console.log(this.state); //no esta guardando el valor de data en el estado!
+    let pokemons = this.state.pokemon;
+    const index = pokemons.findIndex((pokemon) => pokemon.id === data.pokemonId);
+    if (pokemons[index].isFavorite === true) {
+      pokemons[index].isFavorite = false;
+    } else {
+      pokemons[index].isFavorite = true;
+    }
+    this.setState({ pokemon: pokemons });
   }
-
   render() {
     return (
       <div>
