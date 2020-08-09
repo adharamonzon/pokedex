@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $bgsecondary;
+  &__img-container-logo {
+    width: 200px;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__title {
+    font-family: $fontText;
+  }
+  &__img-container-ball {
+    width: 90px;
+    margin-top: 10px;
+  }
+}

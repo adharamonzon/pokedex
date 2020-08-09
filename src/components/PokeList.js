@@ -6,11 +6,11 @@ const PokeList = (props) => {
     /*    console.log(props); */
 
     return (
-      <li className='pokemonList' key={item.id}>
+      <li className='main__list--item' key={item.id}>
         <Pokemon item={item} favoritePokemon={props.favoritePokemon} />
       </li>
     );
   });
-  return <ul className='list'>{items}</ul>;
+  return <ul className='main__list'>{items}</ul>;
 };
 export default PokeList;
