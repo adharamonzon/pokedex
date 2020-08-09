@@ -1,12 +1,12 @@
 .main {
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-    gap: 5px;
     list-style: none;
-    margin-top: 30px;
+    margin-bottom: 0px;
+    height: 100vh;
     background: rgb(250, 255, 255);
     background: linear-gradient(0deg, rgba(78, 79, 79, 1) 0%, rgb(255, 255, 255) 100%);
   }
